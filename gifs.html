@@ -1,0 +1,13 @@
+{%extends "template.html" %}
+
+{% block body %}
+	{% for i in list %}
+	<div id="list-example" class="d-flex container list-group justify-content-center">
+	  <a class="list-group-item list-group-item-action" href="#list-item-1">{{i.capitalize()}}</a>
+	</div>
+	{% endfor %}
+
+	<script type="text/javascript" src="{{url_for('static',filename='signlanguage.js')}}"></script>
+
+
+{% endblock %}

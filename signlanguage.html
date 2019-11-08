@@ -1,0 +1,52 @@
+{%extends "template.html" %}
+
+{% block body %}
+    <div class="container mt-5">
+		  <div class="row">
+		    <div class="col-lg pr-5 mr-5" style="margin-right:200px;">
+				<h1 class="d-flex display-4 pt-5 pr-5" id='text'>D.E.A.F stands for dedicate an ear to a friend.</h1>
+				<br>
+				<br>
+				<h1 style="color:#0275d8;">Upload File</h1>
+				<br>
+				<form method=post enctype=multipart/form-data>
+				  <input type=file name=file>
+					<br>
+					<br>
+				  <input type=submit value=Upload class="btn btn-primary">
+				</form>
+
+		    </div>
+
+
+		    <div class="col-lg pt-5 pl-5" style="margin-left:270px;">
+
+				<h1 class="d-flex display-4 pl-5" id='text'>It is currently in beta version and can translate uploaded audio files to gifs in sign language if they are available in the dataset</h1>
+		    </div>
+		  </div>
+
+    </div>
+
+
+
+
+
+	<div  class="container mt-5" style="margin-top:1000px;">
+		  <div class="row mt-5">
+		    <div class="col-sm">
+				<h1 class="display-4">You said: {{extra_line}}</h1>
+		    </div>
+		    <div class="col-sm">
+		    	<img src="static/gifs/{{extra_line}}.gif" style="height:600px; width:800px;">
+		    </div>
+		    <div class="col-sm pt-5">
+
+		    </div>
+		  </div>
+
+	</div>
+
+
+
+
+{% endblock %}
